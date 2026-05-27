@@ -57,14 +57,22 @@ Restart Home Assistant after saving.
 
 ---
 
-## 2) Add the theme files
+## 2) Install the theme files
+
+### Option A — HACS custom repository (recommended)
+1. Open **HACS → ⋮ → Custom repositories**.
+2. Add `https://github.com/AdamEszes/simple_dreams_hacs` as a **Theme** repository.
+3. Search for **Simple Dreams** in HACS and install it.
+4. HACS will place `simple_dreams.yaml` in `/config/themes/` and the image assets in `/config/www/simple_dreams/`.
+
+### Option B — Manual install
 1. Create the folder: `/config/themes/`
 2. Place `simple_dreams.yaml` inside `/config/themes/`
 3. Create the folder: `/config/www/simple_dreams/`
 4. Copy the `backgrounds` and `weather_icons` folders into `/config/www/simple_dreams/`  
-   - **Example file:** `/config/www/simple_dreams/backgrounds/uhd_background.webp`
+   - **Example file:** `/config/www/simple_dreams/backgrounds/simple_dreams_dark.jpg`
 
-> `config` is the top folder; depending on how you installed Home Assistant, the folder name/path may be called somthing different (i.e. homeassistant), and will incude your configuration.yaml file
+> `config` is the top folder; depending on how you installed Home Assistant, the folder name/path may be called something different (for example `homeassistant`), and will include your `configuration.yaml` file.
 
 ---
 
@@ -86,7 +94,7 @@ Restart Home Assistant after saving.
 ---
 
 ## Common pitfalls & fixes
-- **Theme not listed** → Ensure the `frontend:` section above exists, YAML is valid, then Reload Themes or restart.
+- **Theme not listed** → Ensure the `frontend:` section above exists. If you used HACS, confirm the repository category was **Theme**, then Reload Themes or restart.
 - **Background not loading** → Files must be under `/config/www/...` and referenced as `/local/...` in the YAML.
 - **Mobile cache** → Hard refresh the app or clear the app cache if changes don’t appear.
 
