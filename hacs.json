@@ -1,0 +1,7 @@
+{
+  "name": "Simple Dreams",
+  "content_in_root": false,
+  "domains": ["frontend"],
+  "filename": "simple_dreams.yaml",
+  "render_readme": true
+}
